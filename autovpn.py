@@ -16,7 +16,7 @@ passwd = page.text
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-ip=ip[11:(33-8)]
+ip=ip[11:(33-7)]
 print(ip)
 user=user[12:]
 print user
