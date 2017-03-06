@@ -8,7 +8,10 @@ tree = html.fromstring(page.text)
 plist = tree.xpath('//span[@class="txt"]/p/text()')
 ip= plist[0]
 user=plist[1]
-page = requests.get('http://139.162.74.217/mm.txt')
+passwdsrc = tree.xpath('//iframe')
+src = passwdsrc[0].attrib['src']
+#page = requests.get('http://139.162.74.217/mm.txt')
+page = requests.get(src)
 passwd = page.text
 import sys
 reload(sys)
